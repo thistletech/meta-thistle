@@ -1,0 +1,7 @@
+# short-description: Create an A/B partition disk image
+
+part /mnt/boot --source bootimg-partition --ondisk sda --fstype=vfat --label boot --active --align 4096 --size 20
+part / --source rootfs --label rootfs_a --ondisk sda --fstype=ext4 --align 4096
+part --source rootfs --label rootfs_b --ondisk sda --fstype=ext4 --align 4096
+part /mnt/persist --label persist --ondisk sda --fstype=ext4 --align 4096 --size 100
+

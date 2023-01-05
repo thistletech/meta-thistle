@@ -1,0 +1,7 @@
+# short-description: Create an A/B partition SD card image
+
+part /mnt/boot --source bootimg-partition --ondisk mmcblk0 --fstype=vfat --label boot --active --align 4096 --size 20
+part / --source rootfs --label rootfs_a --ondisk mmcblk0 --fstype=ext4 --align 4096
+part --source rootfs --label rootfs_b --ondisk mmcblk0 --fstype=ext4 --align 4096
+part /mnt/persist --label persist --ondisk mmcblk0 --fstype=ext4 --align 4096 --size 100
+
