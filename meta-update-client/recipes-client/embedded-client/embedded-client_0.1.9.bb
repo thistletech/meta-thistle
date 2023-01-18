@@ -4,9 +4,9 @@ LICENSE = "CLOSED"
 SRC_URI:aarch64 = "https://downloads.thistle.tech/embedded-client/${PV}/tuc-aarch64-unknown-linux-musl;name=tuc-aarch64;downloadfilename=tuc "
 SRC_URI:x86_64 = "https://downloads.thistle.tech/embedded-client/${PV}/tuc-x86_64-unknown-linux-musl;name=tuc-x86_64;downloadfilename=tuc "
 SRC_URI:arm = "https://downloads.thistle.tech/embedded-client/${PV}/tuc-armv7-unknown-linux-musleabihf;name=tuc-arm;downloadfilename=tuc"
-SRC_URI[tuc-aarch64.sha256sum] = "5e96a5da1ffde5b19434488e33341c707b86ed88916ecbf4722b31c32699c35c"
-SRC_URI[tuc-x86_64.sha256sum] = "77c8f27c2a62ba133237246ff738e4695abe3642a5cf3d67f8e3c98c1ac1f757"
-SRC_URI[tuc-arm.sha256sum] = "527fd263dbddb3495e994089f5c6210f4549532a4e9bb5fd2b602ead13179f6a"
+SRC_URI[tuc-aarch64.sha256sum] = "6a6b5d4a81e0f5141e32c0ec1a52872737615cde65d8137ebdfd64bde3110b03"
+SRC_URI[tuc-x86_64.sha256sum] = "606cfdaecdca51762d4b6ec0c09c661c1c14acc547b380155ab24f74f3c56fbd"
+SRC_URI[tuc-arm.sha256sum] = "d718e17f25090e1401c26cf5113681fc6807dabcb72786549959d8ba6e6e5918"
 
 
 INSANE_SKIP:${PN} += "already-stripped"
