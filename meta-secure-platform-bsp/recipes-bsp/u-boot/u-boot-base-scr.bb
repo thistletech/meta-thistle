@@ -7,6 +7,7 @@ DEPENDS = "u-boot-mkimage-native"
 SRC_URI = " \
     file://boot.cmd \
     file://dualboot.cmd \
+    file://uEnv.txt.in \
 "
 
 S = "${WORKDIR}"
@@ -14,6 +15,7 @@ S = "${WORKDIR}"
 inherit deploy
 
 do_compile() {
+    cp "${WORKDIR}/uEnv.txt.in" uEnv.txt
     mkimage -A arm -T script -C none -n "Thistle base boot script" -d "${WORKDIR}/boot.cmd" boot.scr
     mkimage -A arm -T script -C none -n "Thistle base boot script" -d "${WORKDIR}/dualboot.cmd" boot_dualboot.scr
 }
@@ -22,6 +24,7 @@ do_deploy() {
     install -d ${DEPLOYDIR}
     install -m 0644 boot.scr ${DEPLOYDIR}/boot.scr
     install -m 0644 boot_dualboot.scr ${DEPLOYDIR}/boot_dualboot.scr
+    install -m 0644 uEnv.txt ${DEPLOYDIR}
 }
 
 addtask do_deploy after do_compile before do_build
