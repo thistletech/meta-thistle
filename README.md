@@ -8,9 +8,11 @@ release of Yocto is supported.
 
 The following layers are included:
 
-- `meta-secure-platform` - A layer for creating a basic secure image.
-- `meta-update-client-local` - A layer for installing the update client.
-- `meta-lmp-extension` - A layer to build in security features on top of the linux microPlatform from foundaries.io.
-- `meta-raspberrypi` - A layer to allow the secure platform to be run on a Raspberry Pi.
+- `meta-thistle-base` - A layer for creating a basic secure image.
+- `meta-update-client` - A layer for installing the Thistle update client.
 
-
+## Features
+sudo, curl
+bash set with profile
+wifi, network manager
+scsi, vfat, uboot
