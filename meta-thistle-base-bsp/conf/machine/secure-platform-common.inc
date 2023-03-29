@@ -6,4 +6,3 @@ fakeroot create_mount_dirs () {
 }
 
 IMAGE_PREPROCESS_COMMAND += "create_mount_dirs;"
-KERNEL_IMAGETYPE=""
