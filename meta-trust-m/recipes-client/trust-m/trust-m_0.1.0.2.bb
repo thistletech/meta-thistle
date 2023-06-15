@@ -20,9 +20,9 @@ do_compile() {
 
 do_install() {
    install -d ${D}${libdir}
-   install -m 0777 ${S}/bin/libtrustm.so ${D}${libdir}
+   install -m 0755 ${S}/bin/libtrustm.so ${D}${libdir}
    install -d ${D}${bindir}
-   install -m 0777 ${S}/bin/trustm_* ${D}${bindir}
+   install -m 0755 ${S}/bin/trustm_* ${D}${bindir}
 }
 
 FILES_SOLIBSDEV = ""

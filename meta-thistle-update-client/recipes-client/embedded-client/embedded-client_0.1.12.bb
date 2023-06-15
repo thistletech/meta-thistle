@@ -13,5 +13,5 @@ INSANE_SKIP:${PN} += "already-stripped"
 
 do_install() {
     install -d ${D}${bindir}
-    install -m 0777 ${WORKDIR}/tuc ${D}${bindir}/tuc
+    install -m 0755 ${WORKDIR}/tuc ${D}${bindir}/tuc
 }
