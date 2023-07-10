@@ -4,7 +4,7 @@ LICENSE = "MIT"
 
 SRCREV = "${AUTOREV}"
 PV = "1.0+git${SRCPV}"
-SRC_URI:aarch64 = "gitsm://github.com/Infineon/linux-optiga-trust-m.git;protocol=https;branch=development_v3"
+SRC_URI = "gitsm://github.com/Infineon/linux-optiga-trust-m.git;protocol=https;branch=development_v3"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=fc1a86d5b2e9230b6e718647d5ea1252"
 
 DEPENDS = "openssl"
@@ -15,7 +15,12 @@ S = "${WORKDIR}/git"
 do_compile() {
     cd ${S}
     oe_runmake clean
-    oe_runmake AARCH64=YES CC="${CC}"
+
+    if [ "${TARGET_ARCH}" = "aarch64" ]; then
+        oe_runmake AARCH64=YES CC="${CC}"
+    else
+        oe_runmake CC="${CC}"
+    fi
 }
 
 do_install() {
