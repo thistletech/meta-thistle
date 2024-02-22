@@ -2,7 +2,8 @@ SUMMARY = "Install the trust-m tooling"
 DESCRIPTION = "Install the trust-m tooling"
 LICENSE = "MIT"
 
-SRCREV = "${AUTOREV}"
+# 20231128
+SRCREV = "d1d965d6cfae5ed4cb7ec7fa4f9bff0f7ebb58ca"
 PV = "1.0+git${SRCPV}"
 SRC_URI = "gitsm://github.com/Infineon/linux-optiga-trust-m.git;protocol=https;branch=development_v3"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=fc1a86d5b2e9230b6e718647d5ea1252"
